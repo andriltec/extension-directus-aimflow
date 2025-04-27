@@ -1,5 +1,0 @@
-<script>start("/Users/tarcisiocosta/Documents/DIRECTUSDEV/directus-fisio/extensions/directus-extension-bundle-agent/dist/");</script>
-<script>onHasParentDirectory();</script>
-<script>addRow("api.js","api.js",0,72,"72 B",1745785409,"27/04/2025, 16:23:29");</script>
-<script>addRow("app.js","app.js",0,17912,"17.5 kB",1745785410,"27/04/2025, 16:23:30");</script>
-<script>addRow("index.js","index.js",0,151,"151 B",1745777668,"27/04/2025, 14:14:28");</script>
