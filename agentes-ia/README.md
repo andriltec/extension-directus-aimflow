@@ -1,6 +1,6 @@
 # Directus Extension: Agente IA (module-agente-ia)
 
-Extensão para Directus que integra agentes de IA baseados em modelos OpenAI (ex: GPT-4o-mini), permitindo chats inteligentes, uso de funções dinâmicas (webhooks/endpoints), histórico de conversas e integração com collections customizadas.
+Extensão para Directus que integra agentes de IA baseados em modelos OpenAI (ex: GPT-4o-mini), permitindo chats inteligentes, uso de funções dinâmicas (webhooks/endpoints), histórico de conversas e integração com collections customizadas no Directus.
 
 ## 📦 Estrutura dos Arquivos
 
@@ -68,6 +68,25 @@ Os scripts são definidos no `package.json` do bundle principal:
   - Chave OpenAI própria
 - O chat monta o prompt do sistema dinamicamente, envia para a OpenAI e trata respostas/function_call.
 - O histórico é salvo na collection `chat_historico` (ver estrutura abaixo).
+
+### Estrutura da collection `agente`
+```
+-nom
+-descricao
+-usuario
+-status
+-instrucoes
+-artigos
+-weboohoks
+-endpoints
+```
+
+### Response para puxar o dados do `agente`
+Realize um get e veja o retorno:
+```
+{{url}}items/agente?fields[]=id,nome,descricao,usuario.first_name,descricao,status,instrucoes,chave_openai.chave_api,webhook.item.url,webhook.item.nome,webhook.item.contexto,artigos.item.titulo,artigos.item.conteudo,endpoints.item.plataforma.nome,endpoints.item.plataforma.chave_api, endpoints.item.url, endpoints.item.metodo
+```
+
 
 ### Estrutura da collection `chat_historico`
 
